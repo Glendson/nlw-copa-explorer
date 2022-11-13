@@ -3,9 +3,9 @@ let delay = -0.3
 function createGame(p1, p2, hour) {
   return `
     <li>
-      <img src="./assets/icon-${p1}.svg" alt="${p1} flag" />
+      <img src="./assets/flag/icon=${p1}.svg" alt="${p1} flag" />
       <strong>${hour}</strong>
-      <img src="./assets/icon-${p2}.svg" alt="${p2} flag" />
+      <img src="./assets/flag/icon=${p2}.svg" alt="${p2} flag" />
     </li>
   `
 }
@@ -23,8 +23,8 @@ function createCard(date, day, games) {
   `
 }
 
-document.querySelector("#cards").innerHTML = 
-    createCard("24/11", "quinta", createGame()) +
-    createCard("28/11", "segunda") +
-    createCard("02/12", "sexta")
+document.querySelector("#cards").innerHTML =
+  createCard("24/11", "quinta", createGame("brazil", "serbia", "19:00")) +
+  createCard("28/11", "segunda", createGame("brazil", "switzerland", "16:00")) +
+  createCard("02/12", "sexta", createGame("brazil", "cameroon", "19:00"))
 
